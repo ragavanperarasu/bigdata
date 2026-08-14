@@ -1,0 +1,24 @@
+jps
+hdfs dfsadmin -safemode get
+hdfs dfs -ls /
+then hive will start (hive>)
+
+Ex=5
+hive> show databases;
+OK
+bigdata
+default
+test
+Time taken: 0.67 seconds, Fetched: 3 row(s)
+hive> use bigdata;
+OK
+Time taken: 0.163 seconds
+hive> CREATE TABLE department(
+    >     id INT,
+    >     dept STRING
+    > )
+    > ROW FORMAT DELIMITED
+    > FIELDS TERMINATED BY ',';
+OK
+Time taken: 1.121 seconds
+hive> exit;
